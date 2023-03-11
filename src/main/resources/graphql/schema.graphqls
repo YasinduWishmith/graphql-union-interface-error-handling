@@ -1,0 +1,26 @@
+interface Human {
+    name: String
+    age: Int
+}
+
+type Employee implements Human {
+    name: String
+    age: Int
+    empId: String
+    department: String
+
+}
+
+type SportMan implements Human {
+    name: String
+    age: Int
+    sport: String
+}
+
+type Query {
+    getCustomer: [Human]
+    getPersons: Common
+    getError: Common
+}
+
+union Common = Employee | SportMan
